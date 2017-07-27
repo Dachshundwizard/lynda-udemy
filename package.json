@@ -1,0 +1,19 @@
+{
+  "name": "lynda-udemy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quint436/Udemy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Quint436/Udemy/issues"
+  },
+  "homepage": "https://github.com/Quint436/Udemy#readme"
+}

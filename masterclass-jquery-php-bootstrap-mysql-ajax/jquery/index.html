@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Doin some jquery</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        $(document).ready(function() {
+            $('#main_div, #main_div2').sortable({
+                connectWith: '.linking'
+            });
+            $('#btn1').click(function() {
+                $('#para1').append('<p>Hello World!</p>');
+            });
+            $('#btn2').click(function() {
+                $('#para2').append('<p>Yo!</p>')
+            });
+            $('#btn3').click(function() {
+                $('#para2').addClass('body_style body_style2');
+            });
+            $('#btn4').click(function() {
+                $('#para2').removeClass('body_style body_style2');
+            });
+            $('#div1').draggable({
+                revert: "valid"
+            });
+            $('#div3').draggable({
+                revert: "valid"
+            });
+            $('#div2').droppable({
+                accept: '#div1',
+                drop: function(event, ui) {
+                    $('#div1').removeClass('#div1');
+                    $('#div1').addClass('dropped').text('Got it!');
+                }
+            });
+            $('#div1').droppable({
+                accept: '#div3',
+                drop: function(event, ui) {
+                    $(this).addClass('dropped').text('yayyy!');
+                }
+            });
+            var var1 = [
+                'Pakistan',
+                'India',
+                'United States',
+                'Canada',
+                'United Kingdom',
+                'China',
+                'Russia'
+            ];
+            $('#get_data').autocomplete({
+                source: var1
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <input type="text" id="get_data">
+        </div>
+
+
+
+
+
+        <button id="btn1">Add more Content</button>
+        <button id="btn2">Add more!</button>
+        <button id="btn3">Red Box</button>
+        <button id="btn4">Remove Class</button>
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+
+        <div class="main_div">
+            <div class="div10"></div>
+            <div class="div11"></div>
+            <div class="div12"></div>
+            <div class="div13"></div>
+        </div>
+
+
+
+        <p id="para1"></p>
+        <p id="para2"></p>
+
+        <ol id='ol1'>
+
+        </ol>
+
+<div id="main_div" class="linking">
+    <div class="div1k">1</div>
+    <div class="div1k">2</div>
+    <div class="div1k">3</div>
+    <div class="div1k">4</div>
+</div>
+
+<div id="main_div2" class="linking">
+    <div class="div2k">A</div>
+    <div class="div2k">B</div>
+    <div class="div2k">C</div>
+    <div class="div2k">D</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>
