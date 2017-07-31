@@ -1,0 +1,75 @@
+#colorReturned {
+  height: 200px;
+  width: 200px;
+  display: none;
+  margin: 1.66%;
+  border-radius: 15%;
+  transition: 1.0s;
+  -webkit-transition: 1.0s;
+  -moz-transition: 1.0s;
+  -webkit-animation: pulse 1.5s infinite;
+}
+
+@-webkit-keyframes pulse{
+  0%{
+    -webkit-transform: scale(0.98);
+  }
+  50%{
+    -webkit-transform: scale(1.1);
+  }
+  100%{
+    -webkit-transform: scale(0.98);
+  }
+}
+
+.background-full {
+  height: 960px;
+  background-color: #26b4dd;
+  /* layer fill content */
+  background-image: -moz-linear-gradient(right, rgba(0, 0, 0, .49) 0%, rgba(40, 151, 85, .49) 47.19%, rgba(255, 255, 255, .49) 100%);
+  /* gradient overlay */
+  background-image: -o-linear-gradient(right, rgba(0, 0, 0, .49) 0%, rgba(40, 151, 85, .49) 47.19%, rgba(255, 255, 255, .49) 100%);
+  /* gradient overlay */
+  background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, .49) 0%, rgba(40, 151, 85, .49) 47.19%, rgba(255, 255, 255, .49) 100%);
+  /* gradient overlay */
+  background-image: linear-gradient(right, rgba(0, 0, 0, .49) 0%, rgba(40, 151, 85, .49) 47.19%, rgba(255, 255, 255, .49) 100%);
+  /* gradient overlay */
+}
+
+#myColorGuess {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 50px;
+  width: 150px;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.container {
+  margin: 0px auto;
+  width: 210px;
+  text-align: center;
+}
+
+button {
+  border-radius: 15px;
+  width: 100px;
+  height: 50px;
+  line-height: 20px;
+  background: #ffaa00;
+  color: #333;
+  font-weight: bold;
+  box-shadow: 0 0 0 0 #ffff99;
+    transition: box-shadow .3s ease-in, color .3s ease-in;
+}
+
+button:hover {
+      box-shadow: 0 0 80px 10px #ffff99;
+      color: #ffff99;
+    }
+  }
+
+  button:focus {
+    outline:0;
+  }
