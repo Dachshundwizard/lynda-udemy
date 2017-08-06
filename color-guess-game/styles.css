@@ -10,14 +10,14 @@
   -webkit-animation: pulse 1.5s infinite;
 }
 
-@-webkit-keyframes pulse{
-  0%{
+@-webkit-keyframes pulse {
+  0% {
     -webkit-transform: scale(0.98);
   }
-  50%{
+  50% {
     -webkit-transform: scale(1.1);
   }
-  100%{
+  100% {
     -webkit-transform: scale(0.98);
   }
 }
@@ -52,24 +52,24 @@
   text-align: center;
 }
 
-button {
+#countButton {
   border-radius: 15px;
-  width: 100px;
   height: 50px;
   line-height: 20px;
   background: #ffaa00;
   color: #333;
   font-weight: bold;
   box-shadow: 0 0 0 0 #ffff99;
-    transition: box-shadow .3s ease-in, color .3s ease-in;
+  transition: box-shadow .3s ease-in, color .3s ease-in;
 }
 
 button:hover {
-      box-shadow: 0 0 80px 10px #ffff99;
-      color: #ffff99;
-    }
-  }
+  box-shadow: 0 0 80px 10px #ffff99;
+  color: #ffff99;
+}
 
-  button:focus {
-    outline:0;
-  }
+
+}
+button:focus {
+  outline: 0;
+}
