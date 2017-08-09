@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Javascript: While loops</title>
+</head>
+
+<body>
+
+  <div id="messageBox"></div>
+
+  <input id="myNumber" type="number"><br><br>
+  <button id="guessNumber">Guess the number!</button>
+
+
+
+  <script type="text/javascript">
+    // first we are declaring the variable outside
+    var numberGuessed;
+    var computerGuess;
+    var computerCorrect = false // We must initialize a boolean - if computer is wrong, keep going in the while loop - the conditional while looks works because of this
+    var numberOfTries = 1;
+
+    document.getElementById("guessNumber").onclick = function() {
+
+      computerGuess = (Math.random() * 10);
+      computerGuess = Math.floor(computerGuess + 1);
+
+      numberGuessed = parseInt(document.getElementById("myNumber").value);
+
+      if (numberGuessed == computerGuess) {
+        alert("Yay! The computer guessed your number " + numberGuessed + " correct!");
+      } else {
+        while (computerCorrect == false) {
+          computerGuess = (Math.random() * 10);
+          computerGuess = Math.floor(computerGuess + 1);
+          alert("Computer's new guess is: " + computerGuess);
+          numberOfTries++;
+          if (numberGuessed == computerGuess) {
+            computerCorrect = true;
+            alert("The computer guessed the same number as you! It took" + numberOfTries + "Tries!");
+          }
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>
