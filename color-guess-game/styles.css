@@ -63,13 +63,13 @@
   transition: box-shadow .3s ease-in, color .3s ease-in;
 }
 
-button:hover, #countButton {
+button:hover {
   box-shadow: 0 0 80px 10px #ffff99;
   color: #ffff99;
 }
 
 
 }
-button:focus, #countButton {
+button:focus {
   outline: 0;
 }
