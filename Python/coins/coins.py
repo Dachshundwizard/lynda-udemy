@@ -1,7 +1,10 @@
 import random
 
-class Coin:                                     # General class that will work for every other class to inherit from
+class Coin:
     def __init__(self, rare=False, clean=True, heads = True, **kwargs): # This is the constructor function, and it is saying that by default, it is not rare and is clean
+        for key, value in kwargs.items():                               # It will loop through each item and setattr
+            setattr(self,key,value)                                     # This will set up all of the states from the dict for us
+
     self.is_rare = rare
     self.is_clean = clean
     self.heads = heads
@@ -27,15 +30,16 @@ class Coin:                                     # General class that will work f
 
     def flip(self):
         heads_options = [True,False] # this is a Python List
-        choice = random.choice(heads_options)
+        choice = random.choidce(heads_options)
         self.heads = choice
 
+
 class Quarter(Coin): # We are creating a class called "Quarter" and it is inheriting from its parent Coin class
-     def __init__(self):
+    def __init__(self): # We are passing all of this information to the parent class init function
          data = {
          "original_value":0.25,
          "clean_color":"silver",
-         "rusty_color":"brown-greenish",
+         "rusty_color":"brown-greenish", # All of this is going to be packed into Kwargs, and we also use 'super' class init function
          "diameter":.955,
          "num_edges":1,
          "thickness":1.2,
